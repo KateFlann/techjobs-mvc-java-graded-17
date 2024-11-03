@@ -19,8 +19,19 @@
   </tr>
   <tr>
     <!-- TODO #2: Complete the View Jobs By Category Table. -->
+<!--    Modify list.html to fill in the empty table cell with the necessary link.
+Check ListController to help identify the data to pass in for the query parameters.
+Be sure to test your code by clicking your new View All link in the table. There are 98 jobs in the data file.-->
 
-    <td></td> <!-- Feel free to remove or modify this element if necessary. -->
+    <td>
+      <ul>
+        <li>
+<!--          It does NOT like me entering th:text="View All" for some reason.
+Also, the href seems to go to the right place, but is not listing all jobs via ListController...-->
+          <a th:href="@{/list/jobs/(column=all)}">View All</a>
+        </li>
+      </ul>
+    </td>
 
     <td th:each="category : ${tableChoices}">
       <ul>
